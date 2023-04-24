@@ -28,7 +28,7 @@ number.addEventListener('input',function(){
 const pwd = document.querySelector('#pwd');
 const pwdError = document.querySelector('.pwd-error');
 pwd.addEventListener('input', function() {
-let pass = RegExp('^[A-Z a-z]{8}$')
+let pass = RegExp('^(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*()_+])[A-Za-z\\d!@#$%^&*()_+]{8,}$');
 if (pass.test(pwd.value))
     pwdError.textContent = "";
   else
